@@ -58,7 +58,12 @@ describe('validator module performs basic validation of', () => {
   });
 
   it('functions', () => {
-    expect(true).toBeFalsy();
+    expect(validator.isFunction(str)).toBeFalsy();
+    expect(validator.isFunction(num)).toBeFalsy();
+    expect(validator.isFunction(arr)).toBeFalsy();
+    expect(validator.isFunction(obj)).toBeFalsy();
+    expect(validator.isFunction(func)).toBeTruthy();
+    expect(validator.isFunction(bool)).toBeFalsy();
   });
 
 });
