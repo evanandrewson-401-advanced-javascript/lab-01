@@ -89,8 +89,11 @@ describe('performs array validation of', () => {
     expect(validator.isArrayOfNumbers(arrayOfBooleans)).toBeFalsy();
   });
 
-  it.skip('objects', () => {
-  
+  it('objects', () => {
+    expect(validator.isArrayOfObjects(arrayOfStrings)).toBeFalsy();
+    expect(validator.isArrayOfObjects(arrayOfNumbers)).toBeFalsy();
+    expect(validator.isArrayOfObjects(arrayOfObjects)).toBeTruthy();
+    expect(validator.isArrayOfObjects(arrayOfBooleans)).toBeFalsy();
   });
 
   it.skip('booleans', () => {
