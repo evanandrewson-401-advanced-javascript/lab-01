@@ -68,42 +68,74 @@ describe('validator module performs basic validation of', () => {
 
 });
 
-describe('validator module performs complex validations', () => {
+describe('performs array validation of', () => {
 
-  const person = {
-    hair: {color: 'blonde'},
-    name: 'Evan'
-  }
+  const arrayOfStrings = ['a', 'b', 'c'];
+  const arrayOfNumbers = [1, 2, 3];
+  const arrayOfObjects = [{}, {}, {}];
+  const arrayOfBooleans = [true, false, true];
 
-  it('validates the presence of required object properties at any level', () => {
-    // i.e. does person.hair.color exist and have a good value, not just person.hair
-    expect(validator.isObject(person)).toBeTruthy();
-    expect(validator.isDefined(person.hair.color)).toBeTruthy();
+  it('strings', () => {
+    expect(validator.isArrayOfStrings(arrayOfStrings)).toBeTruthy();
+    expect(validator.isArrayOfStrings(arrayOfNumbers)).toBeFalsy();
+    expect(validator.isArrayOfStrings(arrayOfObjects)).toBeFalsy();
+    expect(validator.isArrayOfStrings(arrayOfBooleans)).toBeFalsy();
   });
 
-  it('validates the proper types of object properties', () => {
-    // i.e. person.name must be a string, etc.
-    expect(validator.isString(person.name)).toBeTruthy();
+  it.skip('numbers', () => {
+
   });
 
-  it('validates the types of values contained in an array', () => {
-    // i.e. an array of all strings or numbers
-    const arrayOfNumbers = [1, 2, 3];
-    const arrayOfStrings = ['a', 'b', 'c'];
-    arrayOfNumbers.forEach(item => {
-      expect(validator.isNumber(item)).toBeTruthy();
-    });
-    arrayOfStrings.forEach(item => {
-      expect(validator.isString(item)).toBeTruthy();
-    });
+  it.skip('objects', () => {
+  
   });
 
-  it('validates a value array against an approved list', () => {
-    // i.e. a string might only be allowed to be "yes" or "no"
-    expect(true).toBeFalsy();
+  it.skip('booleans', () => {
+  
   });
-
-  // TODO: Cover so, so many more cases
-
 });
 
+describe('get validator for', () => {
+
+  it('strings', () => {
+    // TODO: pass getValidator the rules
+    expect(validator.getValidator(/* rules */)).toBe(validator.isString);
+  });
+  
+  it.skip('numbers', () => {
+    
+  });
+
+  it.skip('arrays', () => {
+    
+  });
+
+  it.skip('objects', () => {
+    
+  });
+
+  it.skip('booleans', () => {
+    
+  });
+
+  it.skip('functions', () => {
+    
+  });
+
+  it.skip('array of strings', () => {
+    
+  });
+
+  it.skip('array of numbers', () => {
+    
+  });
+
+  it.skip('array of objects', () => {
+    
+  });
+
+  it.skip('array of booleans', () => {
+    
+  });
+
+});
