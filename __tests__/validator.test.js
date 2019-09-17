@@ -30,14 +30,14 @@ describe('validator module performs basic validation of', () => {
     expect(validator.isNumber(bool)).toBeFalsy();
   });
 
-  // it('arrays', () => {
-  //   expect(validator.isArray(str)).toBeFalsy();
-  //   expect(validator.isArray(num)).toBeFalsy();
-  //   expect(validator.isArray(arr)).toBeTruthy();
-  //   expect(validator.isArray(obj)).toBeFalsy();
-  //   expect(validator.isArray(func)).toBeFalsy();
-  //   expect(validator.isArray(bool)).toBeFalsy();
-  // });
+  it('arrays', () => {
+    expect(validator.isArray(str)).toBeFalsy();
+    expect(validator.isArray(num)).toBeFalsy();
+    expect(validator.isArray(arr)).toBeTruthy();
+    expect(validator.isArray(obj)).toBeFalsy();
+    expect(validator.isArray(func)).toBeFalsy();
+    expect(validator.isArray(bool)).toBeFalsy();
+  });
 
   it('objects', () => {
     expect(validator.isObject(str)).toBeFalsy();
@@ -70,19 +70,32 @@ describe('validator module performs basic validation of', () => {
 
 describe('validator module performs complex validations', () => {
 
+  const person = {
+    hair: {color: 'blonde'},
+    name: 'Evan'
+  }
+
   it('validates the presence of required object properties at any level', () => {
     // i.e. does person.hair.color exist and have a good value, not just person.hair
-    expect(true).toBeFalsy();
+    expect(validator.isObject(person)).toBeTruthy();
+    expect(validator.isDefined(person.hair.color)).toBeTruthy();
   });
 
   it('validates the proper types of object properties', () => {
     // i.e. person.name must be a string, etc.
-    expect(true).toBeFalsy();
+    expect(validator.isString(person.name)).toBeTruthy();
   });
 
   it('validates the types of values contained in an array', () => {
     // i.e. an array of all strings or numbers
-    expect(true).toBeFalsy();
+    const arrayOfNumbers = [1, 2, 3];
+    const arrayOfStrings = ['a', 'b', 'c'];
+    arrayOfNumbers.forEach(item => {
+      expect(validator.isNumber(item)).toBeTruthy();
+    });
+    arrayOfStrings.forEach(item => {
+      expect(validator.isString(item)).toBeTruthy();
+    });
   });
 
   it('validates a value array against an approved list', () => {
