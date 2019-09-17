@@ -40,7 +40,12 @@ describe('validator module performs basic validation of', () => {
   // });
 
   it('objects', () => {
-    expect(true).toBeFalsy();
+    expect(validator.isObject(str)).toBeFalsy();
+    expect(validator.isObject(num)).toBeFalsy();
+    expect(validator.isObject(arr)).toBeTruthy();
+    expect(validator.isObject(obj)).toBeTruthy();
+    expect(validator.isObject(func)).toBeFalsy();
+    expect(validator.isObject(bool)).toBeFalsy();
   });
 
   it('booleans', () => {
