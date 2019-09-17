@@ -5,31 +5,21 @@
 ### Author: Evan Andrewson
 
 ### Links and Resources
-* [submission PR](http://xyz.com)
-* [travis](http://xyz.com)
-* [back-end](http://xyz.com) (when applicable)
-* [front-end](http://xyz.com) (when applicable)
+* [submission PR](https://github.com/evanandrewson-401-advanced-javascript/lab-01/pull/1)
+* [travis](https://travis-ci.com/evanandrewson-401-advanced-javascript/lab-01)
+
 
 #### Documentation
-* [api docs](http://xyz.com) (API servers)
-* [jsdoc](http://xyz.com) (Server assignments)
-* [styleguide](http://xyz.com) (React assignments)
-
-### Setup
-#### `.env` requirements
-* `PORT` - Port Number
-* `MONGODB_URI` - URL to the running mongo instance/db
-
-**or, include an `.env.example`**
+* [jsdoc]https://evanandrewson-401-advanced-javascript.github.io/lab-01/docs/) (Server assignments)
 
 #### Running the app
 
 **Describe what npm scripts do**
-(hint: `> npm run` from command line will give you list, paste here and change
-command to description)
-  
-#### Tests
-Any additional testing information
-
-#### UML
-Link to an image of the UML for your application and response to events
+test
+    runs jest tests
+lint
+    runs linter
+test-watch
+    runs jest tests that updates upon changing code
+jsdoc
+    creates docs using jsdoc
