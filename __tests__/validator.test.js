@@ -2,7 +2,7 @@
 
 const validator = require('../lib/validator.js');
 let str = 'yes';
-let numstr = '123'
+let numstr = '123';
 let num = 1;
 let arr = ['a', 'b'];
 let obj = {x:'y'};
