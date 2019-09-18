@@ -1,11 +1,11 @@
 # LAB - 
 
-## Lab 01
+## Lab 02
 
 ### Author: Evan Andrewson
 
 ### Links and Resources
-* [submission PR](https://github.com/evanandrewson-401-advanced-javascript/lab-01/pull/1)
+* [submission PR](https://github.com/evanandrewson-401-advanced-javascript/lab-01/pull/2)
 * [travis](https://travis-ci.com/evanandrewson-401-advanced-javascript/lab-01)
 
 
