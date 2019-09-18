@@ -163,7 +163,7 @@ describe('test casters', () => {
       validator.stringCaster(func);
     }).toThrow(validator.CastError);
     expect(validator.isString(validator.stringCaster(bool))).toBeTruthy();
-  })
+  });
   it('boolean caster', () => {
     expect(() => {
       validator.booleanCaster(str);
@@ -179,7 +179,7 @@ describe('test casters', () => {
       validator.booleanCaster(func);
     }).toThrow(validator.CastError);
     expect(validator.isBoolean(validator.booleanCaster(bool))).toBeTruthy();
-  })
+  });
   it('number caster', () => {
     expect(() => {
       validator.numberCaster(str);
@@ -198,7 +198,7 @@ describe('test casters', () => {
     expect(() => {
       validator.numberCaster(bool);
     }).toThrow(validator.CastError);
-  })
+  });
   it('date caster', () => {
     expect(() => {
       validator.dateCaster(str);
@@ -218,5 +218,5 @@ describe('test casters', () => {
     expect(() => {
       validator.dateCaster(bool);
     }).toThrow(validator.CastError);
-  })
-})
+  });
+});
