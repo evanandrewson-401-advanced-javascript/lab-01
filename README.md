@@ -5,7 +5,7 @@
 ### Author: Evan Andrewson
 
 ### Links and Resources
-* [submission PR](https://github.com/evanandrewson-401-advanced-javascript/lab-01/pull/2)
+* [submission PR](https://github.com/evanandrewson-401-advanced-javascript/lab-01/pull/3)
 * [travis](https://travis-ci.com/evanandrewson-401-advanced-javascript/lab-01)
 
 
