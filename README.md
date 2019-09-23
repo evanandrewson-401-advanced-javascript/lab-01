@@ -10,7 +10,7 @@
 
 
 #### Documentation
-* [jsdoc]https://evanandrewson-401-advanced-javascript.github.io/lab-01/docs/) (Server assignments)
+* [jsdoc]https://evanandrewson-401-advanced-javascript.github.io/lab-01/) (Server assignments)
 
 #### Running the app
 
